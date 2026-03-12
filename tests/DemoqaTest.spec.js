@@ -89,16 +89,16 @@ test('testing the links',async({page,context})=>
    await expect(newPage).toHaveURL('https://demoqa.com/');
 });
 
-// test('testing link',async({page,context})=>
-// {
-//     await page.goto("https://demoqa.com/links");
+test('testing link',async({page,context})=>
+{
+    await page.goto("https://demoqa.com/links");
 
-//     const [newPage1]= await Promise.all(
-//         [
-//            context.waitForEvent('page'),
-//            page.click('#dynamicLink')  
-//         ] );
-//     await newPage1.waitForLoadState();
-//     await expect(newPage1).toHaveURL('https://demoqa.com/');
+    const [newPage1]= await Promise.all(
+        [
+           context.waitForEvent('page'),
+           page.click('#dynamicLink')  
+        ] );
+    await newPage1.waitForLoadState();
+    await expect(newPage1).toHaveURL('https://demoqa.com/');
 
-// })
+})
